@@ -100,4 +100,14 @@ RESOURCE_MAPPING = {
         'methods': ['GET'],
         'docs': None
     },
+    'photos': {
+        'resource': 'photos/',
+        'methods': ['GET'],
+        'docs': None
+    },
+    'photo': {
+        'resource': 'photos/{photo_id}',
+        'methods': ['GET'],
+        'docs': None
+    },
 }
