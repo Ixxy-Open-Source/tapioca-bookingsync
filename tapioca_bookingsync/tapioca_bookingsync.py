@@ -9,7 +9,7 @@ import re
 
 
 class BookingSyncClientAdapter(JSONAdapterMixin, TapiocaAdapter):
-    
+
     api_root = 'https://www.bookingsync.com/api/v3/'
     resource_mapping = RESOURCE_MAPPING
     re_links = re.compile(
@@ -43,7 +43,7 @@ class BookingSyncClientAdapter(JSONAdapterMixin, TapiocaAdapter):
         native = super(BookingSyncClientAdapter, self).response_to_native(response)
         items = []
         assert isinstance(native, dict)
-        for k, v in native.iteritems():
+        for k, v in native.items():
             if isinstance(v, list):
                 items.extend(v)
         return items
